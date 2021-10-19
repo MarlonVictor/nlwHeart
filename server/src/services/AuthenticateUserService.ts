@@ -1,4 +1,7 @@
 import axios from 'axios'
+import { sign } from 'jsonwebtoken'
+
+import prismaClient from '../prisma'
 
 
 interface AccessTokenResponse {
@@ -33,6 +36,39 @@ export default {
             }
         })
 
-        return response.data
+        const { id, name, login, avatar_url } = response.data
+
+        // Procurando se o usuário já foi cadastrado no bd
+        let user = await prismaClient.user.findFirst({
+            where: {
+                github_id: id
+            }
+        })
+
+        if (!user) {
+            user = await prismaClient.user.create({
+                data: {
+                    github_id: id,
+                    name,
+                    login,
+                    avatar_url
+                }
+            })
+        }
+
+        const token = sign(
+            {
+                user: {
+                    id: user.id,
+                    name: user.name
+                }
+            }, process.env.JWT_SECRET, 
+            {
+                subject: user.id,
+                expiresIn: '5d'
+            }
+        )
+
+        return { token, user }
     }
 }

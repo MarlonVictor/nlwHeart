@@ -7,8 +7,12 @@ export default {
     async handle(req: Request, res: Response) {
         const { code } = req.body
 
-        const result = await AuthenticateUserService.execute(code)
+        try {
+            const result = await AuthenticateUserService.execute(code)
+            return res.json(result)
 
-        return res.json(result)
+        } catch (err) {
+            return res.json(err.message)
+        }
     }
 }
