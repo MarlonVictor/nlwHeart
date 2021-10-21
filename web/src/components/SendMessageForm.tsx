@@ -1,11 +1,28 @@
-import { useContext } from 'react'
+import toast from 'react-hot-toast'
+import { FormEvent, useContext, useState } from 'react'
 import { VscGithubInverted } from 'react-icons/vsc'
 
 import { AuthContext } from '../contexts/AuthContext'
+import { api } from '../services/api'
 
 
 export function SendMessageForm() {
     const { user } = useContext(AuthContext)
+
+    const [message, setMessage] = useState('')
+
+    async function handleSendMessage(e: FormEvent) {
+        e.preventDefault()
+
+        if (!message.trim()) {
+            return
+        }
+
+        await api.post('messages', { message })
+
+        setMessage('')
+        toast.success('Mensagem enviada com sucesso!')
+    }
 
     const buttonStyles = 'self-end bg-pink-450 text-white m-4 px-7 h-10 text-sm font-bold uppercase rounded-sm'
 
@@ -40,7 +57,7 @@ export function SendMessageForm() {
                 )
             }
 
-            <form className="flex flex-col self-stretch mt-8 bg-black-750 rounded-sm">
+            <form onSubmit={handleSendMessage} className="flex flex-col self-stretch mt-8 bg-black-750 rounded-sm">
                 <label 
                     htmlFor="message" 
                     className="p-4 text-lg font-bold text-left" 
@@ -54,6 +71,8 @@ export function SendMessageForm() {
                     id="message"
                     placeholder="Qual sua expectativa para o evento?"
                     className="bg-transparent border-none p-4 resize-none h-40 leading-6 focus:outline-none placeholder-opacity-40"
+                    onChange={e => setMessage(e.target.value)}
+                    value={message}
                 />
 
                 {user 
