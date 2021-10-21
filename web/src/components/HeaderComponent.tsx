@@ -1,6 +1,3 @@
-import BadgeIcon from '../assets/badge.svg'
-
-
 const LogoIcon = () => {
     return (
         <svg width="280" height="24" viewBox="0 0 280 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5">
@@ -24,15 +21,18 @@ const LogoIcon = () => {
 
 export function HeaderComponent() {
     return (
-        <header className="bg-gradient-to-b from-black-750 fixed top-0 left-0 right-0">
-            <div className="max-w-6xl mx-auto flex justify-between px-8 pt-6">
+        <header className="bg-gradient-to-b from-black-750 fixed top-0 left-0 right-0 z-10">
+            <div className="max-w-6xl mx-auto flex justify-between px-8 py-6">
                 <LogoIcon />
 
-                <img 
-                    src={BadgeIcon} 
-                    alt="Badge"
-                    className="filter brightness-75"
-                />
+                <nav className="flex gap-5">
+                    <a 
+                        href="#Opinions"
+                        className="border-b-2 border-transparent hover:text-white hover:border-orange-450 transition"
+                    >
+                        Opiniões
+                    </a>
+                </nav>
             </div>
         </header>
     )
