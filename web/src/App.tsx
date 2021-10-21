@@ -1,11 +1,11 @@
+import { VscArrowRight } from 'react-icons/vsc'
+
 import { HeaderComponent } from './components/HeaderComponent'
 import { MainContent } from './components/MainContent'
+import { MessageList } from './components/MessageList'
 import { SendMessageForm } from './components/SendMessageForm'
 
 import HomeImage from './assets/dowhile-home.png'
-
-import { VscArrowRight } from 'react-icons/vsc'
-import { MessageList } from './components/MessageList'
 
 
 function App() {
@@ -29,9 +29,7 @@ function App() {
                 <MainContent />
             </main>
 
-            <section id="Opinions" className="h-screen">
-                <MessageList />
-            </section>
+            <MessageList />
 
             <section id="Form" className="bg-opinions-background bg-cover">
                 <div className="flex justify-between items-center max-w-5xl mx-auto h-screen">

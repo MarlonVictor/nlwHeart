@@ -50,7 +50,7 @@ export function SendMessageForm() {
                 : (
                     <a 
                         href="#Main"
-                        className="text-white font-bold text-xl mt-3 underline hover:text-gray-200 transition-colors" 
+                        className="text-white font-bold text-xl mt-3 px-2 underline hover:text-gray-200 transition-colors" 
                     >
                         Faça o login para deixar sua mensagem
                     </a>

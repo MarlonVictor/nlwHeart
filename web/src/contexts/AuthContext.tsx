@@ -17,7 +17,8 @@ type AuthResponse = {
 
 type AuthContextData = {
     user: User | null,
-    signInUrl: string
+    signInUrl: string,
+    signOut: () => void
 }
 
 type AuthContextProviderProps = {
@@ -46,6 +47,11 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
         setUser(user)
     }
 
+    function signOut() {
+        setUser(null)
+        localStorage.removeItem('@dowhile:token')
+    }
+
     useEffect(() => {
         const token = localStorage.getItem('@dowhile:token')
 
@@ -71,7 +77,7 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ user, signInUrl }}>
+        <AuthContext.Provider value={{ user, signInUrl, signOut }}>
             {children}
         </AuthContext.Provider>
     )
