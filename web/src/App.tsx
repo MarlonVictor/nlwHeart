@@ -5,6 +5,7 @@ import { SendMessageForm } from './components/SendMessageForm'
 import HomeImage from './assets/dowhile-home.png'
 
 import { VscArrowRight } from 'react-icons/vsc'
+import { MessageList } from './components/MessageList'
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
             </main>
 
             <section id="Opinions" className="h-screen">
-                <p>Opiniões</p>
+                <MessageList />
             </section>
 
             <section id="Form" className="bg-opinions-background bg-cover">
