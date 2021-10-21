@@ -10,11 +10,21 @@ module.exports = {
                 pink: {
                     450: '#FF008E'
                 },
+                orange: {
+                    450: '#FF7A29'
+                },
                 yellow: {
-                    450: '#FFCD1E',
-                    550: '#FF7A29'
+                    450: '#FFCD1E'
+                },
+                black: {
+                    750: '#202024',
+                    850: '#121214',
+                    950: '#09090A'
                 }
-            }
+            },
+            backgroundImage: theme => ({
+                'home-background': "url('/src/assets/background-home.png')"
+            })
         }
     },
   variants: {
