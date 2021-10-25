@@ -5,14 +5,17 @@ import { COLORS, FONTS } from '../../theme'
 export const styles = StyleSheet.create({
     container: {
         width: '100%',
-        marginBottom: 20
+        marginBottom: 10,
+        padding: 15,
+        borderRadius: 5,
+        backgroundColor: '#202024'
     },
     message: {
         fontSize: 15,
         fontFamily: FONTS.REGULAR,
         color: COLORS.WHITE,
         lineHeight: 20,
-        marginBottom: 12
+        marginTop: 12
     },
     footer: {
         width: '100%',

@@ -4,7 +4,7 @@ import prismaClient from '../prisma'
 export default {
     async execute() {
         const messages = await prismaClient.message.findMany({
-            take: 9,
+            take: 6,
             orderBy: {
                 create_at: 'desc'
             },

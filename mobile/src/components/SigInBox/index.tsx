@@ -10,17 +10,17 @@ import { COLORS } from '../../theme'
 
 
 export function SignInBox() {
-    const { signIn } = useContext(AuthContext)
+    const { signIn, isSigningIn } = useContext(AuthContext)
 
     return (
         <View style={styles.container}>
             <Button 
-                title="ENTRAR COM O GITHUB"
-                color={COLORS.BLACK_PRIMARY}
                 icon="github"
-                backgroundColor={COLORS.YELLOW}
-                isLoading={false}
+                title="ENTRAR COM O GITHUB"
                 onPress={signIn}
+                color={COLORS.BLACK_PRIMARY}
+                backgroundColor={COLORS.YELLOW}
+                isLoading={isSigningIn}
             />
         </View>
     )

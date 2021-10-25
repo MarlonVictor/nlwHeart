@@ -11,7 +11,9 @@ export const styles = StyleSheet.create({
         backgroundColor: COLORS.BLACK_TERTIARY,
         paddingBottom: getBottomSpace() + 16,
         paddingTop: 16,
-        paddingHorizontal: 24
+        paddingHorizontal: 24,
+        borderTopWidth: 1,
+        borderColor: COLORS.GRAY_PRIMARY
     },
     input: {
         width: '100%',

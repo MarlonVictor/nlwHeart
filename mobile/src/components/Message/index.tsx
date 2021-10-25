@@ -28,10 +28,6 @@ export function Message({ data }: Props) {
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ type: 'timing', duration: 700 }}
         >
-            <Text style={styles.message}>
-                {data.text}
-            </Text>
-
             <View style={styles.footer}>
                 <UserPhoto sizes="SMALL" imageUri={data.user.avatar_url} />
                 
@@ -39,6 +35,10 @@ export function Message({ data }: Props) {
                     {data.user.name}
                 </Text>
             </View>
+
+            <Text style={styles.message}>
+                {data.text}
+            </Text>
         </MotiView>
     )
 }
