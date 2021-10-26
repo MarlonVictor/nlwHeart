@@ -40,6 +40,12 @@ export function HeaderComponent() {
                     >
                         Opiniões
                     </a>
+                    <a 
+                        href="#Methods"
+                        className="border-b-2 border-transparent hover:text-white hover:border-orange-450 transition"
+                    >
+                        Métodos
+                    </a>
 
                     {user && (
                         <button 

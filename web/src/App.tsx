@@ -6,6 +6,8 @@ import { MessageList } from './components/MessageList'
 import { SendMessageForm } from './components/SendMessageForm'
 
 import HomeImage from './assets/dowhile-home.png'
+import { MethodBlock } from './components/MethodBlock'
+import { FooterComponent } from './components/FooterComponent'
 
 
 function App() {
@@ -49,6 +51,29 @@ function App() {
                     <SendMessageForm />
                 </div>
             </section>
+
+            <section id="Methods" className="h-screen mx-auto max-w-5xl flex flex-col justify-center">
+                <div className="flex justify-between">
+                    <h1 className="font-bold text-4xl pr-36">Método desenhado para acelerar a sua evolução</h1>
+                    <p>Combinamos 3 pilares para você conquistar experiência, dominar as ferramentas e saber se posicionar profissionalmente</p>
+                </div>
+
+                <div className="grid grid-cols-3 mt-28 gap-3">
+                    <MethodBlock title="Foco">
+                        <p>Programação é um universo infinito, por isso ter foco é o primeiro passo para atingir seus objetivos. Escolha o conteúdo mais alinhada com o seu momento e objetivo e vá direto ao ponto naquilo que faz sentido para para você.</p>
+                    </MethodBlock>
+                    <MethodBlock title="Grupo">
+                        <p>A conexão entre Devs impulsiona seu repertório técnico, suas habilidades comportamentais e sua rede de contatos. Durante o evento, você vai poder interagir com os educators, se conectar com os milhares de devs, ajudar e pedir ajudar.</p>
+                    </MethodBlock>
+                    <MethodBlock title="Prática">
+                        <p>Juntos, vamos desenvolver uma aplicação completa do início ao fim, pra você aprender de forma eficiente e expandir o seu portfólio. Essas horas de código vão te dar confiança e propriedade para tomar as melhores decisões.</p>
+                    </MethodBlock>
+                </div>
+            </section>
+
+            <div className="border-t-2 border-gray-500">
+                <FooterComponent />
+            </div>
         </>
     )
 }
