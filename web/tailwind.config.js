@@ -24,7 +24,8 @@ module.exports = {
             },
             backgroundImage: theme => ({
                 'home-background': "url('/src/assets/background-home.png')",
-                'opinions-background': "url('/src/assets/background-opinions.png')"
+                'opinions-background': "url('/src/assets/background-opinions.png')",
+                'countdown-background': "url('/src/assets/background-countdown.png')"
             })
         }
     },

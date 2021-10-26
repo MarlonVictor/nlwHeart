@@ -14,12 +14,12 @@ export function FooterComponent() {
             </a>
 
             <a 
-                href="https://dowhile.io/inscricao" 
+                href="https://www.rocketseat.com.br" 
                 target="_blank"
                 className="h-6 flex gap-1 items-center border-b-2 border-transparent hover:text-white hover:border-orange-450 transition"
             >
-                <strong>Quero participar</strong>
-                <h3>do DoWhile2021</h3>
+                <h3>Projeto construido durante o evento da</h3>
+                <strong>Rocketseat</strong>
             </a>
 
             <a href="#" className="bg-black-750 w-10 h-10 flex items-center justify-center rounded hover:filter hover:opacity-75">

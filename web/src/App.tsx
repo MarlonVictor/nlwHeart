@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/HeaderComponent'
 import { MainContent } from './components/MainContent'
 import { MessageList } from './components/MessageList'
 import { SendMessageForm } from './components/SendMessageForm'
+import { CountdownContainer } from './components/CountdownContainer'
 
 import HomeImage from './assets/dowhile-home.png'
 import { MethodBlock } from './components/MethodBlock'
@@ -70,6 +71,8 @@ function App() {
                     </MethodBlock>
                 </div>
             </section>
+
+            <CountdownContainer />
 
             <div className="border-t-2 border-gray-500">
                 <FooterComponent />
