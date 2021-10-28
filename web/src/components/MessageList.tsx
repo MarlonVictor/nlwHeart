@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { io } from 'socket.io-client'
+import { VscArrowDown } from 'react-icons/vsc'
 
 import { api } from '../services/api'
 
@@ -45,16 +46,16 @@ export function MessageList() {
     }, [])
 
     return (
-        <section id="Opinions" className="h-auto max-w-6xl mx-auto pt-16 pb-24 bg-home-background">
-            <ul className="mt-6" style={{ columns: '3', columnGap: '16px', height: '90%' }}>
+        <section id="Opinions" className="pt-16 pb-16 md:pb-24 bg-home-background bg-cover">
+            <ul className="mt-6 max-w-6xl mx-auto px-5 sm:px-10">
                 {messages.length > 0 && messages.map((message, key) => {
                     return (
                     <li 
                             key={key} 
-                            className="bg-black-750 w-full mb-4 p-5 overflow-hidden rounded-sm"
+                            className="bg-black-750 filter bg-opacity-30 w-full mb-2 lg:mb-4 p-3 lg:p-5 overflow-hidden rounded-sm"
                             style={{ breakInside: 'avoid' }}
                         >
-                            <header className="flex gap-3 items-center pb-5 mb-5 border-b-2 border-opacity-10">
+                            <header className="flex gap-3 items-center pb-3 lg:pb-5 mb-3 lg:mb-5 border-b-2 border-opacity-5">
                                 <div className="p-px bg-gradient-to-r from-pink-450 to-yellow-450 rounded-full leading-none">
                                     <img 
                                         src={message.user.avatar_url} 
@@ -69,6 +70,10 @@ export function MessageList() {
                     )
                 })} 
             </ul>
+            <a href="#Form" className="hidden lg:flex mx-auto text-xl items-center justify-between w-56 pt-8 border-b-2 border-transparent hover:text-white hover:border-orange-450 transition cursor-pointer">
+                Deixe sua mensagem
+                <VscArrowDown />
+            </a>
         </section>
     )
 }

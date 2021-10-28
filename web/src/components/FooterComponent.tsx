@@ -3,7 +3,7 @@ import { VscGithubInverted, VscArrowUp } from 'react-icons/vsc'
 
 export function FooterComponent() {
     return (
-        <footer className="flex justify-between items-center max-w-5xl mx-auto py-5">
+        <footer className="flex justify-between items-center max-w-5xl mx-auto py-5 px-5">
             <a 
                 href="htps://github.com/MarlonVictor"
                 target="_blank"
@@ -16,7 +16,7 @@ export function FooterComponent() {
             <a 
                 href="https://www.rocketseat.com.br" 
                 target="_blank"
-                className="h-6 flex gap-1 items-center border-b-2 border-transparent hover:text-white hover:border-orange-450 transition"
+                className="hidden h-6 sm:flex gap-1 items-center border-b-2 border-transparent hover:text-white hover:border-orange-450 transition"
             >
                 <h3>Projeto construido durante o evento da</h3>
                 <strong>Rocketseat</strong>

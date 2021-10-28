@@ -30,19 +30,19 @@ export function HeaderComponent() {
 
     return (
         <header className="bg-gradient-to-b from-black-750 fixed top-0 left-0 right-0 z-10">
-            <div className="max-w-6xl mx-auto flex justify-between px-8 py-6">
+            <div className="flex justify-between items-center py-6 px-5 lg:max-w-6xl mx-auto">
                 <LogoIcon />
 
-                <nav className="flex gap-5">
+                <nav className="flex gap-5 pl-10">
                     <a 
                         href="#Opinions"
-                        className="border-b-2 border-transparent hover:text-white hover:border-orange-450 transition"
+                        className="hidden sm:block mt-0.5 border-b-2 border-transparent hover:text-white hover:border-orange-450 transition"
                     >
                         Opiniões
                     </a>
                     <a 
                         href="#Methods"
-                        className="border-b-2 border-transparent hover:text-white hover:border-orange-450 transition"
+                        className="hidden sm:block mt-0.5 border-b-2 border-transparent hover:text-white hover:border-orange-450 transition"
                     >
                         Métodos
                     </a>
@@ -50,10 +50,10 @@ export function HeaderComponent() {
                     {user && (
                         <button 
                             onClick={signOut}
-                            className="flex gap-2 ml-10 text-yellow-400 border-b-2 border-transparent hover:border-yellow-450 transition"
+                            className="flex md:mt-0.5 gap-2 ml-10 text-yellow-400 border-b-2 border-transparent hover:border-yellow-450 transition"
                         >
-                            SignOut
-                            <VscSignOut className="transform translate-y-0.5" />
+                            <span className="hidden md:block">SignOut</span>
+                            <VscSignOut className="text-2xl md:text-base -mt-1 md:m-0 transform translate-y-0.5" />
                         </button>
                     )}
                 </nav>

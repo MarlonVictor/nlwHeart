@@ -18,14 +18,13 @@ function App() {
             
             <main 
                 id="Main"
-                style={{ height: 'calc(100vh - 50px)'}}
-                className="bg-home-background flex justify-center items-center mt-14 mx-auto max-w-5xl"
+                className="bg-home-background pt-40 sm:pt-0 sm:h-screen transform -translate-y-12 flex justify-center items-center mt-14 mx-auto md:max-w-3xl lg:max-w-5xl"
             >
-                <span className="flex-1">
+                <span className="hidden sm:block w-52 md:w-auto lg:w-96 xl:flex-1">
                     <img 
                         src={HomeImage} 
                         alt="DoWhile" 
-                        className="w-96"
+                        className="lg:w-96"
                     />
                 </span>
 
@@ -34,12 +33,12 @@ function App() {
 
             <MessageList />
 
-            <section id="Form" className="bg-opinions-background bg-cover">
-                <div className="flex justify-between items-center max-w-5xl mx-auto h-screen">
-                    <aside style={{ width: '500px' }}>
-                        <h1 className="font-bold text-4xl text-white mb-4">O lançamento oficial do DoWhile 2021 será em breve.</h1>
+            <section id="Form" className="bg-opinions-background bg-cover md:px-10 lg:px-0">
+                <div className="flex flex-col md:flex-row justify-between items-center lg:px-0 lg:max-w-5xl mx-auto h-screen">
+                    <aside className="md:w-96 md:mr-10 lg:w-3/6 xl:w-2/5 px-10 pt-16 md:px-0">
+                        <h1 className="font-bold text-3xl sm:text-4xl text-white mb-4">O lançamento oficial do DoWhile 2021 será em breve.</h1>
 
-                        <p className="flex items-center gap-5 text-yellow-450 mb-4">
+                        <p className="flex items-center gap-5 text-yellow-450 mb-6 md:mb-4">
                             <VscArrowRight 
                                 size={24}
                                 className="text-pink-450 -translate-y-px transform"
@@ -47,19 +46,20 @@ function App() {
                             <span>01 e 02 de dezembro</span>  
                         </p>
 
-                        <p className="text-lg">Muito em breve teremos o lançamento oficial do DoWhile. Entre para a lista de espera e compartilhe conosco suas expectativas sobre o evento.</p>
+                        <p className="hidden md:block text-lg">Muito em breve teremos o lançamento oficial do DoWhile. Entre para a lista de espera e compartilhe conosco suas expectativas sobre o evento.</p>
                     </aside>
+
                     <SendMessageForm />
                 </div>
             </section>
 
-            <section id="Methods" className="h-screen mx-auto max-w-5xl flex flex-col justify-center">
+            <section id="Methods" className="lg:h-screen my-10 lg:my-0 sm:mx-10 lg:mx-auto lg:max-w-5xl flex flex-col justify-center">
                 <div className="flex justify-between">
-                    <h1 className="font-bold text-4xl pr-36">Método desenhado para acelerar a sua evolução</h1>
-                    <p>Combinamos 3 pilares para você conquistar experiência, dominar as ferramentas e saber se posicionar profissionalmente</p>
+                    <h1 className="font-bold text-3xl md:text-4xl lg:pr-36 mx-10 sm:mx-0">Método desenhado para acelerar a sua evolução.</h1>
+                    <p className="hidden md:block">Combinamos 3 pilares para você conquistar experiência, dominar as ferramentas e saber se posicionar profissionalmente.</p>
                 </div>
 
-                <div className="grid grid-cols-3 mt-28 gap-3">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 mt-16 lg:mt-28 gap-3 mx-5 sm:mx-0">
                     <MethodBlock title="Foco">
                         <p>Programação é um universo infinito, por isso ter foco é o primeiro passo para atingir seus objetivos. Escolha o conteúdo mais alinhada com o seu momento e objetivo e vá direto ao ponto naquilo que faz sentido para para você.</p>
                     </MethodBlock>
@@ -74,7 +74,7 @@ function App() {
 
             <CountdownContainer />
 
-            <div className="border-t-2 border-gray-500">
+            <div className="border-t-2 sm:border-t-0 border-gray-500">
                 <FooterComponent />
             </div>
         </>

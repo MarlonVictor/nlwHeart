@@ -29,3 +29,26 @@ body {
     color: #E1E1E6;
     background: #121214;
 }
+
+#Opinions ul {
+    height: 90%;
+    columns: 3;
+    column-gap: 16px;
+}
+
+@media(max-width: 1024px) {
+    #Opinions ul {
+        columns: 2;
+        column-gap: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    #Opinions ul {
+        columns: 1;
+    }
+
+    #Opinions ul li:nth-child(4), #Opinions ul li:nth-child(5), #Opinions ul li:nth-child(6) {
+        display: none;
+    }
+}

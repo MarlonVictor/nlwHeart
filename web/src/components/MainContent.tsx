@@ -10,7 +10,7 @@ export function MainContent() {
     const buttonStyles = 'flex items-center justify-center p-3 rounded-md bg-yellow-450 text-black-950'
 
     return (
-        <aside className="w-1/3 flex flex-col justify-between">
+        <aside className="px-10 sm:pr-0 sm:w-96 flex flex-col justify-between">
             <div>
                 <h1 className="font-bold text-3xl text-gray-100">
                     Juntos, vamos construir o futuro.

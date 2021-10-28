@@ -16,7 +16,7 @@ export function CountdownContainer() {
 
         } else {
             return (
-                <div className="min-w-screen h-96 bg-countdown-background flex items-center justify-center px-5 py-5">
+                <div className="min-w-screen h-96 bg-countdown-background hidden sm:flex items-center justify-center px-5 py-5">
                     <div className="text-yellow-100">
                         <h1 className="text-4xl text-center mb-3 font-extralight">O DoWhile2021 começa em:</h1>
                         <div className="text-6xl text-center flex w-full items-center justify-center">
