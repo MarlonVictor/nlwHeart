@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { io } from 'socket.io-client'
 import { VscArrowDown } from 'react-icons/vsc'
 
+import { LazyAnimation } from './AnimateComponent'
+
 import { api } from '../services/api'
 
 
@@ -46,7 +48,7 @@ export function MessageList() {
     }, [])
 
     return (
-        <section id="Opinions" className="pt-16 pb-16 md:pb-24 bg-home-background bg-cover">
+        <section id="Opinions" className="-mt-12 pt-16 pb-16 md:pb-24 bg-home-background bg-cover">
             <ul className="mt-6 max-w-6xl mx-auto px-5 sm:px-10">
                 {messages.length > 0 && messages.map((message, key) => {
                     return (
@@ -70,10 +72,13 @@ export function MessageList() {
                     )
                 })} 
             </ul>
-            <a href="#Form" className="hidden lg:flex mx-auto text-xl items-center justify-between w-56 pt-8 border-b-2 border-transparent hover:text-white hover:border-orange-450 transition cursor-pointer">
-                Deixe sua mensagem
-                <VscArrowDown />
-            </a>
+            
+            <LazyAnimation>
+                <a href="#Form" className="hidden lg:flex mx-auto text-xl items-center justify-between w-56 pt-8 border-b-2 border-transparent hover:text-white hover:border-orange-450 transition cursor-pointer">
+                    Deixe sua mensagem
+                    <VscArrowDown />
+                </a>
+            </LazyAnimation>
         </section>
     )
 }

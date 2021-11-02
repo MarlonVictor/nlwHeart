@@ -2,6 +2,8 @@ import toast from 'react-hot-toast'
 import { FormEvent, useContext, useState } from 'react'
 import { VscGithubInverted } from 'react-icons/vsc'
 
+import { LazyAnimation } from './AnimateComponent'
+
 import { AuthContext } from '../contexts/AuthContext'
 import { api } from '../services/api'
 
@@ -27,7 +29,7 @@ export function SendMessageForm() {
     const buttonStyles = 'self-end bg-pink-450 text-white m-4 px-7 h-10 text-sm font-bold uppercase rounded-sm'
 
     return (
-        <div className="p-4 self-center w-full sm:w-96 lg:flex-1 flex flex-col items-center text-center rounded-sm" style={{ maxWidth: '400px', background: '#1B1B1F' }}>
+        <LazyAnimation className="p-4 self-center w-full sm:w-96 lg:flex-1 flex flex-col items-center text-center rounded-sm" style={{ maxWidth: '400px', background: '#1B1B1F' }}>
             {user 
                 ? (
                     <header className="flex md:flex-col items-center gap-5 md:gap-0">
@@ -91,6 +93,6 @@ export function SendMessageForm() {
                     )
                 }
             </form>
-        </div>
+        </LazyAnimation>
     )
 }

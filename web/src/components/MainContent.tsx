@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import { VscGithubInverted, VscArrowDown } from 'react-icons/vsc'
 
+import { LazyAnimation } from './AnimateComponent'
+
 import { AuthContext } from '../contexts/AuthContext'
 
 
@@ -10,7 +12,7 @@ export function MainContent() {
     const buttonStyles = 'flex items-center justify-center p-3 rounded-md bg-yellow-450 text-black-950'
 
     return (
-        <aside className="px-10 sm:pr-0 sm:w-96 flex flex-col justify-between">
+        <LazyAnimation className="px-10 sm:pr-0 sm:w-96 flex flex-col justify-between">
             <div>
                 <h1 className="font-bold text-3xl text-gray-100">
                     Juntos, vamos construir o futuro.
@@ -37,6 +39,6 @@ export function MainContent() {
                     </a>
                 )
             }
-        </aside>
+        </LazyAnimation>
     )
 }
