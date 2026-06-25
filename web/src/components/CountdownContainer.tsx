@@ -14,7 +14,7 @@ type RendererProps = {
 export function CountdownContainer() {
     const renderer = ({ days, hours, minutes, seconds, completed }: RendererProps) => {
         if (completed) {
-            return <h1>O evento começou!!</h1>
+            return <h1 className='hidden'>O evento começou!!</h1>
 
         } else {
             return (

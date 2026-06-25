@@ -26,10 +26,10 @@ export function SendMessageForm() {
         toast.success('Mensagem enviada com sucesso!')
     }
 
-    const buttonStyles = 'self-end bg-pink-450 text-white m-4 px-7 h-10 text-sm font-bold uppercase rounded-sm'
+    const buttonStyles = 'self-end bg-pink-450 text-white m-4 px-7 h-10 text-sm font-bold uppercase rounded-lg'
 
     return (
-        <LazyAnimation className="p-4 self-center w-full sm:w-96 lg:flex-1 flex flex-col items-center text-center rounded-sm" style={{ maxWidth: '400px', background: '#1B1B1F' }}>
+        <LazyAnimation className="p-4 self-center w-full sm:w-96 lg:flex-1 flex flex-col items-center text-center rounded-lg" style={{ maxWidth: '400px', background: '#1B1B1F' }}>
             {user 
                 ? (
                     <header className="flex md:flex-col items-center gap-5 md:gap-0">
@@ -59,7 +59,7 @@ export function SendMessageForm() {
                 )
             }
 
-            <form onSubmit={handleSendMessage} className="flex flex-col self-stretch mt-4 md:mt-8 bg-black-750 rounded-sm">
+            <form onSubmit={handleSendMessage} className="flex flex-col self-stretch mt-4 md:mt-8 bg-black-750 rounded-lg overflow-hidden">
                 <label 
                     htmlFor="message" 
                     className="py-2 px-4 md:py-4 text-lg font-bold text-left" 
