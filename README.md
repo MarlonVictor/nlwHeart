@@ -1,52 +1,55 @@
-<div align="center">
+<h1 align="center" style="font-weight: bold;">
+  <img src="https://user-images.githubusercontent.com/62356988/140073035-3fc8bcc4-109f-48b2-bc7d-4b559d8c6302.png" alt="DoWhile NLW Heat logo" width="200" height="auto" /><br />
+</h1>
 
-  <img src="https://user-images.githubusercontent.com/62356988/140073035-3fc8bcc4-109f-48b2-bc7d-4b559d8c6302.png" alt="DoWhile NLW Heat logo" width="200" height="auto" />
-  
-  <p>
-    A real-time hype wall for the DoWhile 2021 event — built during NLW Heat by Rocketseat.
-  </p>
-  
-  
-<!-- Badges -->
-<p>
+<p align="center">
   <img src="https://img.shields.io/github/last-commit/MarlonVictor/nlwHeart?style=for-the-badge&logo=git&logoColor=white&labelColor=09090A&color=FF7A29" alt="last commit" />
   <img src="https://img.shields.io/github/stars/MarlonVictor/nlwHeart?style=for-the-badge&logo=github&logoColor=white&labelColor=09090A&color=FF7A29" alt="stars" />
   <img src="https://img.shields.io/github/license/MarlonVictor/nlwHeart?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=09090A&color=FF7A29" alt="license" />
 </p>
-</div>
 
-<br />
+<p align="center">
+ <a href="#layout">Layout</a> •
+ <a href="#features">Features</a> •
+ <a href="#technologies">Technologies</a> •
+ <a href="#colors">Colors</a> •
+ <a href="#started">Getting Started</a> •
+ <a href="#usage">Usage</a> •
+ <a href="#routes">Routes</a> •
+ <a href="#roadmap">Roadmap</a> •
+ <a href="#colab">Collaborators</a> •
+ <a href="#license">License</a>
+</p>
 
-<!-- About the Project -->
-## :star2: About the Project
+<p align="center">
+    <b>nlwHeart is a real-time hype wall for the DoWhile 2021 event — built during NLW Heat by Rocketseat.</b>
+</p>
 
-DoWhile 2021 is a platform built during NLW Heat by [Rocketseat](https://github.com/rocketseat-education) in October 2021. It collects hype messages from attendees for the DoWhile event, which took place on December 1–2, 2021.
+<p align="center">
+    The project includes a web app, a mobile app, and a real-time API. Users sign in with GitHub, browse messages from other participants, and share their own expectations for the event.
+</p>
 
-The project includes a web app, a mobile app, and a real-time API. Users sign in with GitHub, browse messages from other participants, and share their own expectations for the event.
+<p align="center">
+     <a href="https://dowhile-demo.netlify.app/">📱 Visit this Project</a>
+</p>
 
+<h2 id="layout">🎨 Layout</h2>
 
-<!-- Screenshots -->
-### :camera: Screenshots
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/62356988/140078445-6a593413-66ab-4933-9471-4eb3ecebd007.png" alt="Home page screenshot" width="900px">
+</p>
 
-<div align="center"> 
-  <img src="https://user-images.githubusercontent.com/62356988/140078445-6a593413-66ab-4933-9471-4eb3ecebd007.png" alt="Home page screenshot" width="900" />
-</div>
+<h2 id="features">✨ Features</h2>
 
-**GitHub login**
+- Sign in with GitHub OAuth
+- View messages from all participants in real time
+- Send hype messages for the DoWhile event
+- Responsive web layout with updated design
+- Toast notifications for system feedback
+- Layout animations powered by Framer Motion
+- Cross-platform mobile experience with Expo
 
-<div align="center"> 
-  <img src="https://user-images.githubusercontent.com/62356988/140086382-50bb968c-07cd-4b86-8cdc-3a446904e77b.gif" alt="GitHub login flow" width="900" />
-</div>
-
-**Sending a message**
-
-<div align="center"> 
-  <img src="https://user-images.githubusercontent.com/62356988/140089370-c3fcefa2-ea29-4ae6-a915-ed6ee454ed23.gif" alt="Sending a message" width="900" />
-</div>
-
-
-<!-- TechStack -->
-### :space_invader: Tech Stack
+<h2 id="technologies">💻 Technologies</h2>
 
 **Client (Web)**
 
@@ -76,19 +79,7 @@ The project includes a web app, a mobile app, and a real-time API. Users sign in
 
 - [SQLite](https://www.sqlite.org/)
 
-<!-- Features -->
-### :dart: Features
-
-- Sign in with GitHub OAuth
-- View messages from all participants in real time
-- Send hype messages for the DoWhile event
-- Responsive web layout with updated design
-- Toast notifications for system feedback
-- Layout animations powered by Framer Motion
-- Cross-platform mobile experience with Expo
-
-<!-- Color Reference -->
-### :art: Color Reference
+<h2 id="colors">🎨 Color Palette</h2>
 
 | Color | Preview | Hex |
 | ----- | ------- | --- |
@@ -100,52 +91,36 @@ The project includes a web app, a mobile app, and a real-time API. Users sign in
 | Accent Yellow | ![#FFCD1E](https://singlecolorimage.com/get/FFCD1E/64x24) | `#FFCD1E` |
 | Success Green | ![#1B873F](https://singlecolorimage.com/get/1B873F/64x24) | `#1B873F` |
 
+<h2 id="started">🚀 Getting started</h2>
 
-<!-- Env Variables -->
-### :key: Environment Variables
+<h3>Cloning</h3>
 
-**Server** (`server/.env`)
+```bash
+git clone https://github.com/MarlonVictor/nlwHeart.git
+cd nlwHeart
+```
 
-`GITHUB_CLIENT_ID`
+<h3>Environment Variables</h3>
 
-`GITHUB_CLIENT_SECRET`
-
-`JWT_SECRET`
-
-**Mobile** (`mobile/.env`)
-
-`GITHUB_CLIENT_ID`
-
-Copy the example files before running the apps:
+Copy the example files and fill in your GitHub OAuth credentials:
 
 ```bash
 cp server/.env.example server/.env
 cp mobile/.env.example mobile/.env
 ```
 
-<!-- Getting Started -->
-## 	:toolbox: Getting Started
+| Variable | Location | Description |
+| -------- | -------- | ----------- |
+| `GITHUB_CLIENT_ID` | `server/.env` | GitHub OAuth app client ID |
+| `GITHUB_CLIENT_SECRET` | `server/.env` | GitHub OAuth app client secret |
+| `JWT_SECRET` | `server/.env` | Secret for signing JWT tokens |
+| `GITHUB_CLIENT_ID` | `mobile/.env` | GitHub OAuth app client ID (mobile) |
 
-<!-- Prerequisites -->
-### :bangbang: Prerequisites
+<h3>Installation</h3>
 
-- [Node.js](https://nodejs.org/) (v14 or later recommended)
-- [Yarn](https://yarnpkg.com/) package manager
-- [Expo Go](https://expo.dev/client) (for the mobile app on a physical device)
-
-```bash
-npm install --global yarn
-```
-
-<!-- Installation -->
-### :gear: Installation
-
-Clone the repository and install dependencies for each workspace:
+Install dependencies for each workspace:
 
 ```bash
-git clone https://github.com/MarlonVictor/nlwHeart.git
-cd nlwHeart
-
 cd server && yarn install && cd ..
 cd web && yarn install && cd ..
 cd mobile && yarn install && cd ..
@@ -157,8 +132,7 @@ Set up the database (from the `server` directory):
 npx prisma migrate dev
 ```
 
-<!-- Run Locally -->
-### :running: Run Locally
+<h3>Starting</h3>
 
 The API must be running before starting the web or mobile clients.
 
@@ -189,9 +163,7 @@ yarn start
 
 Scan the QR code with the [Expo Go](https://expo.dev/client) app or run on an emulator.
 
-
-<!-- Deployment -->
-### :triangular_flag_on_post: Deployment
+<h3>Deployment</h3>
 
 The web client (demo) is deployed at [https://dowhile-demo.netlify.app/](https://dowhile-demo.netlify.app/).
 
@@ -203,9 +175,9 @@ yarn build
 yarn serve
 ```
 
+The output is generated in the `web/dist/` folder and can be served by any static hosting provider.
 
-<!-- Usage -->
-## :eyes: Usage
+<h2 id="usage">👀 Usage</h2>
 
 1. Start the API server on port `3333`.
 2. Open the web or mobile client and sign in with your GitHub account.
@@ -214,22 +186,63 @@ yarn serve
 
 The web client connects to the API at `http://localhost:3333` by default (`web/src/services/api.ts`).
 
+<div id="routes"></div>
 
-<!-- Roadmap -->
-## :compass: Roadmap
+## 📍 Application Routes
+
+**Web (single page)**
+
+| route | description |
+| ----- | ----------- |
+| <kbd>/</kbd> | Hype wall with GitHub sign-in, live messages, and event info |
+
+**Mobile**
+
+| screen | description |
+| ------ | ----------- |
+| <kbd>Home</kbd> | Message feed, sign-in, and send message form |
+
+## 📍 API Routes
+
+| route | description |
+| ----- | ----------- |
+| <kbd>GET /github</kbd> | Redirect to GitHub OAuth |
+| <kbd>GET /signin/callback</kbd> | OAuth callback |
+| <kbd>POST /authenticate</kbd> | Authenticate user with GitHub code |
+| <kbd>POST /messages</kbd> | Create a hype message (authenticated) |
+| <kbd>GET /messages/latest</kbd> | Get the latest messages |
+| <kbd>GET /profile</kbd> | Get authenticated user profile |
+
+## 📍 Database Structure
+
+| model | description |
+| ----- | ----------- |
+| <kbd>users</kbd> | User profile (`name`, `github_id`, `avatar_url`, `login`) |
+| <kbd>messages</kbd> | Hype message (`text`, `user_id`, `create_at`) |
+
+<h2 id="roadmap">🧭 Roadmap</h2>
 
 * [x] GitHub OAuth authentication
 * [x] Real-time message feed with Socket.IO
 * [x] Web and mobile clients
 * [x] Responsive redesign with animations
 
+<h2 id="colab">🤝 Collaborators</h2>
 
-<!-- Contributing -->
-## :wave: Contributing
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/MarlonVictor">
+        <img src="https://avatars.githubusercontent.com/u/62356988?v=4" width="100px;" alt="Marlon Victor Profile Picture"/><br>
+        <sub>
+          <b>Marlon Victor</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-<a href="https://github.com/MarlonVictor/nlwHeart/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=MarlonVictor/nlwHeart" />
-</a>
+<h2 id="contribute">🤝 Contribute</h2>
 
 Contributions are always welcome!
 
@@ -239,41 +252,6 @@ Contributions are always welcome!
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+<h2 id="license">License 📃</h2>
 
-<!-- Code of Conduct -->
-### :scroll: Code of Conduct
-
-Please be respectful and constructive when contributing or opening issues.
-
-
-<!-- FAQ -->
-## :grey_question: FAQ
-
-- **Do I need a GitHub OAuth app to run locally?**
-
-  + Yes. Create a GitHub OAuth application and set `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` in `server/.env`. Use the mobile `GITHUB_CLIENT_ID` in `mobile/.env` as well.
-
-- **Why are messages not updating in real time?**
-
-  + Make sure the API server is running and that the web/mobile client can reach `http://localhost:3333`.
-
-
-<!-- License -->
-## :warning: License
-
-Distributed under the MIT License. See [LICENSE](https://github.com/MarlonVictor/nlwHeart/blob/master/LICENSE) for more information.
-
-
-<!-- Contact -->
-## :handshake: Contact
-
-Marlon Victor — [@MarlonVictor](mailto:umarlon.co@gmail.com)
-
-Project Link: [https://github.com/MarlonVictor/nlwHeart](https://github.com/MarlonVictor/nlwHeart)
-
-
-<!-- Acknowledgments -->
-## :gem: Acknowledgements
-
-- NLW Heat lessons by [Diego Fernandes](https://github.com/diego3g), [Daniele Leão](https://github.com/danileao), and [Rodrigo Gonçalves](https://github.com/rodrigorgtic)
-- [Rocketseat](https://github.com/rocketseat-education)
+This project is under [MIT](./LICENSE) license.
